@@ -14,6 +14,7 @@ namespace Heranca
         public int Agencia { get; set; }
         public string Titular { get; set; }
         public double Saldo { get; set; }
+        public Banco() { }
 
         public Banco(int numCont, int agencia, string titular, double saldo)
         {
@@ -25,10 +26,18 @@ namespace Heranca
 
         public double Deposito(double valor)
         {
-            return Saldo += valor;
+            if(valor >= 0)
+            {
+                return Saldo += valor;
+            }
+            else
+            {
+                Console.WriteLine("Opção Inválida!");
+            }
+            return Saldo;
         }
 
-        public double Saque(double sacar)
+        public virtual double Saque(double sacar)
         {
             if (sacar <= Saldo)
             {

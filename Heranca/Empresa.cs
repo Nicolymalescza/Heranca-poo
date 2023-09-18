@@ -12,6 +12,7 @@ namespace Heranca
         public double LimiteEmprestimo { get; set; }
         public double TotalEmprestimo { get; set; }
 
+        public Empresa() { }
         public Empresa(int numCont, int agencia, string titular, double saldo, double taxaAnuidade, double limiteEmprestimo, double totalEmprestimo) : base( numCont,  agencia,  titular,  saldo)
         {
             TaxaAnuidade = taxaAnuidade;
@@ -19,7 +20,7 @@ namespace Heranca
             TotalEmprestimo = totalEmprestimo;
         }
 
-        public void Emprestimo(double valor)
+        public double Emprestimo(double valor)
         {
             if(valor <= LimiteEmprestimo)
             {
@@ -31,15 +32,16 @@ namespace Heranca
             {
                 Console.WriteLine("O valor de empréstimo não pode ser concedido\nSaldo insuficiente!");
             }
+            return TotalEmprestimo;
         }
 
-        public void SaqueTaxa(double valor)
+        public double SaqueTaxa(double valor)
         {
             if(valor >= 5000.00)
             {
-                Saldo = Saldo - (valor + 5);
+                return Saldo - (valor + 5);
             }
+            return Saldo;
         }
-        
     }   
 }

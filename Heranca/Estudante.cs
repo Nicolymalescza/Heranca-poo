@@ -11,7 +11,8 @@ namespace Heranca
         public double LimiteChequeEspecial { get; set; }
         public string cpf { get; set; }
         public string NomeInstituicao { get; set; }
-        
+
+        public Estudante() { }
 
         public Estudante(int numCont, int agencia, string titular, double saldo, double limiteChequeEspecial, string cpf, string nomeInstituicao): base (numCont, agencia, titular, saldo)
         {
@@ -19,8 +20,7 @@ namespace Heranca
             this.cpf = cpf;
             NomeInstituicao = nomeInstituicao;
         }
-
-        public void Saque(double valor)
+        public override double Saque(double valor)
         {
             if (valor > LimiteChequeEspecial)
             {
@@ -30,6 +30,7 @@ namespace Heranca
             {
                 Saldo = Saldo - valor;
             }
+            return Saldo;
         }
     }
 }
