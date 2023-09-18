@@ -1,0 +1,5 @@
+C:\Users\nicol\OneDrive\Documentos\IFRO\2º ANO\POO\3Bimestre\Heranca\Heranca\obj\Debug\net6.0\Heranca.csproj.AssemblyReference.cache
+C:\Users\nicol\OneDrive\Documentos\IFRO\2º ANO\POO\3Bimestre\Heranca\Heranca\obj\Debug\net6.0\Heranca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\OneDrive\Documentos\IFRO\2º ANO\POO\3Bimestre\Heranca\Heranca\obj\Debug\net6.0\Heranca.AssemblyInfoInputs.cache
+C:\Users\nicol\OneDrive\Documentos\IFRO\2º ANO\POO\3Bimestre\Heranca\Heranca\obj\Debug\net6.0\Heranca.AssemblyInfo.cs
+C:\Users\nicol\OneDrive\Documentos\IFRO\2º ANO\POO\3Bimestre\Heranca\Heranca\obj\Debug\net6.0\Heranca.csproj.CoreCompileInputs.cache
