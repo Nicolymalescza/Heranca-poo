@@ -14,7 +14,7 @@ namespace Heranca
 
         public Estudante() { }
 
-        public Estudante(int numCont, int agencia, string titular, double saldo, double limiteChequeEspecial, string cpf, string nomeInstituicao): base (numCont, agencia, titular, saldo)
+        public Estudante(int numCont, string agencia, string titular, double saldo, double limiteChequeEspecial, string cpf, string nomeInstituicao): base (numCont, agencia, titular, saldo)
         {
             LimiteChequeEspecial = limiteChequeEspecial;
             this.cpf = cpf;

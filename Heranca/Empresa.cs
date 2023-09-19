@@ -13,16 +13,15 @@ namespace Heranca
         public double TotalEmprestimo { get; set; }
 
         public Empresa() { }
-        public Empresa(int numCont, int agencia, string titular, double saldo, double taxaAnuidade, double limiteEmprestimo, double totalEmprestimo) : base( numCont,  agencia,  titular,  saldo)
+        public Empresa(int numCont, string agencia, string titular, double saldo, double taxaAnuidade, double limiteEmprestimo) : base(numCont, agencia, titular, saldo)
         {
             TaxaAnuidade = taxaAnuidade;
             LimiteEmprestimo = limiteEmprestimo;
-            TotalEmprestimo = totalEmprestimo;
         }
 
         public double Emprestimo(double valor)
         {
-            if(valor <= LimiteEmprestimo)
+            if(valor <= LimiteEmprestimo - TotalEmprestimo)
             {
                 Saldo += valor;
                 TotalEmprestimo += valor;
@@ -37,9 +36,17 @@ namespace Heranca
 
         public double SaqueTaxa(double valor)
         {
-            if(valor >= 5000.00)
+            if(valor <= Saldo)
             {
-                return Saldo - (valor + 5);
+                Saldo -= valor;
+                if(valor >= 5000)
+                {
+                    return Saldo -= 5;
+                }               
+            }
+            else
+            {
+                Console.WriteLine("Saldo insuficiente!");
             }
             return Saldo;
         }

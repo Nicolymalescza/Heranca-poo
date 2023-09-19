@@ -11,12 +11,12 @@ namespace Heranca
     public class Banco
     {
         public int NumCont { get; set; }
-        public int Agencia { get; set; }
+        public string Agencia { get; set; }
         public string Titular { get; set; }
         public double Saldo { get; set; }
         public Banco() { }
 
-        public Banco(int numCont, int agencia, string titular, double saldo)
+        public Banco(int numCont, string agencia, string titular, double saldo)
         {
             this.NumCont = numCont;
             this.Agencia = agencia;
